@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Wind, Heart, Sparkles, Zap, Shield, Trophy } from "lucide-react";
+import robocleanRemote from "@/assets/roboclean-remote.jpg";
 
 const benefits = [
   {
@@ -45,6 +46,15 @@ export const Benefits = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Tecnologia premium que transforma limpeza em saúde
           </p>
+        </div>
+
+        {/* Product Image with Remote */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <img 
+            src={robocleanRemote} 
+            alt="Roboclean Pro com controle remoto - Tecnologia e praticidade" 
+            className="w-full rounded-lg shadow-2xl"
+          />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

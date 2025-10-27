@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShieldCheck, Droplets, Wind } from "lucide-react";
+import robocleanHero from "@/assets/roboclean-hero.png";
 
 const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/B9Z6OayDdU2Hf7a9V0ZVS2";
 
@@ -17,7 +18,18 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Product Image */}
+          <div className="order-2 lg:order-1 animate-fade-in">
+            <img 
+              src={robocleanHero} 
+              alt="Roboclean Pro - Aspirador com Filtragem de Água e HEPA" 
+              className="w-full max-w-lg mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="order-1 lg:order-2 text-center lg:text-left space-y-8 animate-fade-in">
           {/* Badges */}
           <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
             <Badge variant="secondary" className="px-4 py-2 text-sm">
@@ -65,10 +77,11 @@ export const Hero = () => {
             </Button>
           </div>
 
-          {/* Trust indicators */}
-          <p className="text-sm text-muted-foreground pt-8">
-            Mais de 30.000 famílias já confiam no Roboclean
-          </p>
+            {/* Trust indicators */}
+            <p className="text-sm text-muted-foreground pt-8">
+              Mais de 30.000 famílias já confiam no Roboclean
+            </p>
+          </div>
         </div>
       </div>
     </section>
