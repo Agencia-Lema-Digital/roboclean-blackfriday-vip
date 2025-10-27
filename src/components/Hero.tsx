@@ -15,7 +15,7 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto relative z-10 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-0 my-[30px]">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center my-[30px] py-0">
           {/* Product Image */}
           <div className="order-2 lg:order-1 animate-fade-in">
             <img src={robocleanHero} alt="Roboclean Pro - Aspirador com Filtragem de Água e HEPA" className="w-full max-w-md lg:max-w-lg mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
