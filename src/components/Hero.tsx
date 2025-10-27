@@ -15,7 +15,7 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto relative z-10 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-0 my-[30px]">
           {/* Product Image */}
           <div className="order-2 lg:order-1 animate-fade-in">
             <img src={robocleanHero} alt="Roboclean Pro - Aspirador com Filtragem de Água e HEPA" className="w-full max-w-md lg:max-w-lg mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
@@ -40,7 +40,7 @@ export const Hero = () => {
           </div>
 
           {/* Main headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight lg:text-5xl xl:text-6xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight lg:text-4xl xl:text-6xl">
             A limpeza que transformou{" "}
             <span className="text-accent">milhares de lares</span>
             <br />
@@ -48,7 +48,7 @@ export const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-delayed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-delayed lg:text-xl">
             A Black Friday da Roboclean chegou e vai surpreender você.
             Participe do grupo exclusivo no WhatsApp e seja o primeiro a descobrir a{" "}
             <span className="text-accent font-semibold">oferta secreta</span> que só será revelada lá
