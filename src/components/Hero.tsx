@@ -2,12 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShieldCheck, Droplets, Wind } from "lucide-react";
 import robocleanHero from "@/assets/roboclean-hero.png";
-
 const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/B9Z6OayDdU2Hf7a9V0ZVS2";
-
 export const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-4 overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-4 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-background opacity-90" />
       
@@ -21,11 +18,7 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Product Image */}
           <div className="order-2 lg:order-1 animate-fade-in">
-            <img 
-              src={robocleanHero} 
-              alt="Roboclean Pro - Aspirador com Filtragem de Água e HEPA" 
-              className="w-full max-w-md lg:max-w-lg mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500"
-            />
+            <img src={robocleanHero} alt="Roboclean Pro - Aspirador com Filtragem de Água e HEPA" className="w-full max-w-md lg:max-w-lg mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
           </div>
 
           {/* Content */}
@@ -47,7 +40,7 @@ export const Hero = () => {
           </div>
 
           {/* Main headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight lg:text-5xl xl:text-6xl">
             A limpeza que transformou{" "}
             <span className="text-accent">milhares de lares</span>
             <br />
@@ -64,12 +57,7 @@ export const Hero = () => {
 
           {/* CTA Button */}
           <div className="pt-4 animate-fade-in-delayed">
-            <Button 
-              variant="cta" 
-              size="lg"
-              asChild
-              className="text-sm sm:text-base lg:text-lg px-6 sm:px-10 lg:px-12 py-6 sm:py-7 lg:py-8 h-auto animate-glow-pulse w-full sm:w-auto"
-            >
+            <Button variant="cta" size="lg" asChild className="text-sm sm:text-base lg:text-lg px-6 sm:px-10 lg:px-12 py-6 sm:py-7 lg:py-8 h-auto animate-glow-pulse w-full sm:w-auto">
               <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                 <span className="text-xl sm:text-2xl">👉</span>
                 <span className="break-words">Quero entrar no grupo exclusivo!</span>
@@ -84,6 +72,5 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };

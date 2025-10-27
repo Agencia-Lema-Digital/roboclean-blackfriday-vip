@@ -2,22 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
 import robocleanDetail from "@/assets/roboclean-detail.jpg";
-
 const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/B9Z6OayDdU2Hf7a9V0ZVS2";
-
 export const Curiosity = () => {
-  return (
-    <section className="py-16 sm:py-20 lg:py-24 px-4 bg-gradient-to-b from-background to-secondary/30">
+  return <section className="py-16 sm:py-20 lg:py-24 px-4 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto max-w-6xl">
         <Card className="p-6 sm:p-8 lg:p-12 bg-card/80 backdrop-blur-sm border-2 border-accent/20 shadow-2xl overflow-hidden">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
             {/* Product Image */}
             <div className="order-2 md:order-1">
-              <img 
-                src={robocleanDetail} 
-                alt="Roboclean Pro - Detalhe do produto premium" 
-                className="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-500"
-              />
+              <img src={robocleanDetail} alt="Roboclean Pro - Detalhe do produto premium" className="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-500" />
             </div>
 
             {/* Content */}
@@ -47,12 +40,7 @@ export const Curiosity = () => {
               </div>
 
               <div className="pt-4 sm:pt-6">
-                <Button 
-                  variant="cta" 
-                  size="lg"
-                  asChild
-                  className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-5 sm:py-6 lg:py-7 h-auto w-full md:w-auto"
-                >
+                <Button variant="cta" size="lg" asChild className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-5 sm:py-6 lg:py-7 h-auto w-full md:w-auto">
                   <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                     <span className="text-lg sm:text-xl">👉</span>
                     <span className="break-words">Entrar no grupo antes que fechem as vagas</span>
@@ -63,6 +51,5 @@ export const Curiosity = () => {
           </div>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
