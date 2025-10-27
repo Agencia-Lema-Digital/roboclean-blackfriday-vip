@@ -5,11 +5,9 @@ import { Benefits } from "@/components/Benefits";
 import { Exclusivity } from "@/components/Exclusivity";
 import { SocialProof } from "@/components/SocialProof";
 import { Footer } from "@/components/Footer";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
-      <Header />
+  return <div className="min-h-screen">
+      <Header className="bg-white/[0.92]" />
       <main>
         <Hero />
         <Curiosity />
@@ -18,8 +16,6 @@ const Index = () => {
         <SocialProof />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
