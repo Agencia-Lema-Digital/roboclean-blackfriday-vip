@@ -3,7 +3,7 @@ import { Instagram, Music } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-secondary/50 border-t border-border py-12 px-4">
+    <footer className="bg-white/90 border-t border-border py-12 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Logo and description */}
