@@ -7,7 +7,7 @@ import { SocialProof } from "@/components/SocialProof";
 import { Footer } from "@/components/Footer";
 const Index = () => {
   return <div className="min-h-screen">
-      <Header className="bg-white/85" />
+      <Header className="bg-white/[0.86]" />
       <main>
         <Hero />
         <Curiosity />
