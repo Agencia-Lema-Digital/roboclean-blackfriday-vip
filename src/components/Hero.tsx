@@ -24,20 +24,7 @@ export const Hero = () => {
           {/* Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in">
           {/* Badges */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 mb-4">
-            <Badge variant="secondary" className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm">
-              <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
-              Certificado Inmetro
-            </Badge>
-            <Badge variant="secondary" className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm">
-              <Wind className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
-              Selo ECARF
-            </Badge>
-            <Badge variant="secondary" className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm">
-              <Droplets className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
-              Dupla Filtragem
-            </Badge>
-          </div>
+          
 
           {/* Main headline */}
           <h1 className="font-altone sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-2 sm:px-0 text-4xl">
@@ -47,7 +34,7 @@ export const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-delayed px-2 sm:px-0">
+          <p className="sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-delayed px-2 sm:px-0 text-sm">
             A Black Friday da Roboclean chegou e vai surpreender você.
             Participe do grupo exclusivo no WhatsApp e seja o primeiro a descobrir a{" "}
             <span className="text-accent font-semibold">oferta secreta</span> que só será revelada lá
