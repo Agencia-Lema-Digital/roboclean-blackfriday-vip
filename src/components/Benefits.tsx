@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Wind, Heart, Sparkles, Zap, Shield, Trophy } from "lucide-react";
-import robocleanRemote from "@/assets/roboclean-remote.jpg";
+import robocleanVideo from "@/assets/roboclean-video.mp4";
+import { useEffect, useRef } from "react";
 
 const benefits = [
   {
@@ -36,6 +37,33 @@ const benefits = [
 ];
 
 export const Benefits = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.muted = false;
+            video.play().catch(err => console.log("Autoplay prevented:", err));
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section className="py-16 sm:py-20 lg:py-24 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
@@ -48,16 +76,28 @@ export const Benefits = () => {
           </p>
         </div>
 
-        {/* Product Image with Remote */}
-        <div className="max-w-4xl mx-auto mb-12 sm:mb-16 overflow-hidden rounded-lg">
-          <img 
-            src={robocleanRemote} 
-            alt="Roboclean Pro com controle remoto - Tecnologia e praticidade" 
-            className="w-full h-auto rounded-lg shadow-2xl"
-          />
-        </div>
+        {/* Layout responsivo: vídeo vertical no mobile, lado a lado no desktop */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
+          {/* Vídeo vertical */}
+          <div className="w-full lg:w-2/5 flex justify-center">
+            <div className="max-w-sm w-full overflow-hidden rounded-lg shadow-2xl">
+              <video 
+                ref={videoRef}
+                src={robocleanVideo}
+                className="w-full h-auto rounded-lg"
+                loop
+                playsInline
+                muted
+                preload="metadata"
+              >
+                Seu navegador não suporta vídeos.
+              </video>
+            </div>
+          </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {/* Grid de benefícios ao lado (desktop) ou abaixo (mobile) */}
+          <div className="w-full lg:w-3/5">
+            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
@@ -78,6 +118,8 @@ export const Benefits = () => {
               </Card>
             );
           })}
+            </div>
+          </div>
         </div>
       </div>
     </section>
