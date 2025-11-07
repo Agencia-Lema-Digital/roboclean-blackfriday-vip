@@ -41,7 +41,7 @@ export const SocialProof = () => {
     <section className="py-16 sm:py-20 lg:py-24 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-4">
+          <h2 className="font-altone text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-4">
             Mais de <span className="text-accent">30.000 famílias</span> já respiram melhor
             <br className="hidden sm:block" />
             com o Roboclean

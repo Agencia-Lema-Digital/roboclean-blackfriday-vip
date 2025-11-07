@@ -37,7 +37,7 @@ export const Exclusivity = () => {
             </div>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-4">
+          <h2 className="font-altone text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-4">
             Somente quem estiver dentro do grupo vai saber…
           </h2>
         </div>

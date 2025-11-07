@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'altone': ['Bebas Neue', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -82,8 +85,8 @@ export default {
           "100%": { opacity: "1", transform: "translateY(0)" }
         },
         "glow-pulse": {
-          "0%, 100%": { boxShadow: "0 0 20px hsla(174, 72%, 56%, 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsla(174, 72%, 56%, 0.6)" }
+          "0%, 100%": { boxShadow: "0 0 20px hsla(196, 100%, 50%, 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsla(196, 100%, 50%, 0.6)" }
         }
       },
       animation: {

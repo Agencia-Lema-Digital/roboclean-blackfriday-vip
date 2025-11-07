@@ -19,7 +19,7 @@ export const Curiosity = () => {
                 <Sparkles className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-accent animate-pulse" />
               </div>
               
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+              <h2 className="font-altone text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 Você achava que já conhecia o Roboclean...
                 <br className="hidden sm:block" />
                 <span className="text-accent">mas ainda não viu o que está por vir!</span>
