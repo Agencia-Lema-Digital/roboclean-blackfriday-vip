@@ -40,7 +40,7 @@ export const Hero = () => {
           </div>
 
           {/* Main headline */}
-          <h1 className="font-altone text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-2 sm:px-0">
+          <h1 className="font-altone sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-2 sm:px-0 text-4xl">
             A limpeza que transformou{" "}
             <span className="text-accent">milhares de lares</span>
             {" "}agora com a maior oferta do ano!

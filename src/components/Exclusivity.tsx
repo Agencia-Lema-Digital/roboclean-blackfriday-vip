@@ -69,7 +69,7 @@ export const Exclusivity = () => {
                   <Button variant="cta" size="lg" asChild className="text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 h-auto w-full animate-glow-pulse">
                     <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1.5 sm:gap-2">
                       <span className="text-lg sm:text-xl lg:text-2xl flex-shrink-0">🔥</span>
-                      <span className="break-words text-center leading-tight">Quero fazer parte do grupo e garantir meu acesso antecipado!</span>
+                      <span className="break-words text-center leading-tight text-sm">Quero fazer parte do grupo!</span>
                     </a>
                   </Button>
                 </div>
