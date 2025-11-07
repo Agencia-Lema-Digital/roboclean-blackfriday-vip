@@ -29,7 +29,7 @@ export const Exclusivity = () => {
             </div>
           </div>
 
-          <h2 className="font-altone text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-4">
+          <h2 className="font-altone text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight px-4">
             Somente quem estiver dentro do grupo vai saber…
           </h2>
         </div>
@@ -66,10 +66,10 @@ export const Exclusivity = () => {
               </div>
 
                 <div className="pt-4 sm:pt-6">
-                  <Button variant="cta" size="lg" asChild className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-6 sm:py-7 lg:py-8 h-auto w-full animate-glow-pulse">
-                    <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 break-words">
-                      <span className="text-xl sm:text-2xl flex-shrink-0">🔥</span>
-                      <span className="break-words text-center text-sm">Quero fazer parte do grupo e garantir meu acesso antecipado!</span>
+                  <Button variant="cta" size="lg" asChild className="text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 h-auto w-full animate-glow-pulse">
+                    <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1.5 sm:gap-2">
+                      <span className="text-lg sm:text-xl lg:text-2xl flex-shrink-0">🔥</span>
+                      <span className="break-words text-center leading-tight">Quero fazer parte do grupo e garantir meu acesso antecipado!</span>
                     </a>
                   </Button>
                 </div>

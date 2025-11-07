@@ -40,15 +40,14 @@ export const Hero = () => {
           </div>
 
           {/* Main headline */}
-          <h1 className="font-altone text-3xl sm:text-4xl md:text-5xl font-bold leading-tight lg:text-4xl xl:text-5xl">
+          <h1 className="font-altone text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-2 sm:px-0">
             A limpeza que transformou{" "}
             <span className="text-accent">milhares de lares</span>
-            <br />
-            agora com a maior oferta do ano!
+            {" "}agora com a maior oferta do ano!
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-delayed lg:text-xl">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-delayed px-2 sm:px-0">
             A Black Friday da Roboclean chegou e vai surpreender você.
             Participe do grupo exclusivo no WhatsApp e seja o primeiro a descobrir a{" "}
             <span className="text-accent font-semibold">oferta secreta</span> que só será revelada lá
@@ -56,11 +55,11 @@ export const Hero = () => {
           </p>
 
           {/* CTA Button */}
-          <div className="pt-4 animate-fade-in-delayed">
-            <Button variant="cta" size="lg" asChild className="text-sm sm:text-base lg:text-lg px-6 sm:px-10 lg:px-12 py-6 sm:py-7 lg:py-8 h-auto animate-glow-pulse w-full sm:w-auto">
+          <div className="pt-4 animate-fade-in-delayed px-2 sm:px-0">
+            <Button variant="cta" size="lg" asChild className="text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-8 lg:px-12 py-5 sm:py-6 lg:py-8 h-auto animate-glow-pulse w-full sm:w-auto">
               <a href={WHATSAPP_GROUP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                <span className="text-xl sm:text-2xl">👉</span>
-                <span className="break-words">Quero entrar no grupo exclusivo!</span>
+                <span className="text-lg sm:text-xl lg:text-2xl">👉</span>
+                <span className="break-words leading-tight">Quero entrar no grupo exclusivo!</span>
               </a>
             </Button>
           </div>
