@@ -47,14 +47,22 @@ export const Benefits = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            video.muted = false;
-            video.play().catch(err => console.log("Autoplay prevented:", err));
+            // Start playing muted first (required for autoplay)
+            video.muted = true;
+            video.play()
+              .then(() => {
+                // Once playing, gradually unmute after a small delay
+                setTimeout(() => {
+                  video.muted = false;
+                }, 100);
+              })
+              .catch(err => console.log("Autoplay prevented:", err));
           } else {
             video.pause();
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     observer.observe(video);
