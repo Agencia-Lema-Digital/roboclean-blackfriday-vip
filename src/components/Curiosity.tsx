@@ -37,10 +37,10 @@ export const Curiosity = () => {
               </div>
 
               <div className="pt-4 sm:pt-6">
-                <Button variant="cta" size="lg" asChild className="text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 h-auto w-full md:w-auto whitespace-normal break-words">
-                  <a href={FORM_SECTION_ID} className="flex items-center justify-center gap-2">
-                    <span className="text-lg sm:text-xl">👉</span>
-                    <span className="break-words">Quero uma demonstração gratuita na minha casa</span>
+                <Button variant="cta" size="lg" asChild className="text-sm sm:text-base md:text-lg px-4 sm:px-6 py-4 sm:py-5 md:py-6 h-auto w-full md:w-auto max-w-full">
+                  <a href={FORM_SECTION_ID} className="flex items-center justify-center gap-2 text-center">
+                    <span className="text-lg sm:text-xl hidden sm:inline">👉</span>
+                    <span className="leading-tight">Quero minha demonstração gratuita</span>
                   </a>
                 </Button>
               </div>

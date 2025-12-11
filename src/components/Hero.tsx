@@ -24,22 +24,22 @@ export const Hero = () => {
           {/* Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in">
           {/* Main headline */}
-          <h1 className="font-altone sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-2 sm:px-0 text-4xl">
+          <h1 className="font-altone text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
             Mais do que um aspirador: o Roboclean transforma o ar, o ambiente e o{" "}
             <span className="text-accent">bem-estar da sua família.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-delayed px-2 sm:px-0 text-sm">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-delayed">
             Há quase 30 anos, o Roboclean vem revolucionando a forma de cuidar da casa — purificando o ar, eliminando ácaros e elevando a saúde e o conforto de milhares de lares.
           </p>
 
           {/* CTA Button */}
-          <div className="pt-4 animate-fade-in-delayed px-2 sm:px-0">
-            <Button variant="cta" size="lg" asChild className="text-xs sm:text-sm md:text-base lg:text-lg px-4 sm:px-8 lg:px-12 py-5 sm:py-6 lg:py-8 h-auto animate-glow-pulse w-full sm:w-auto">
-              <a href={FORM_SECTION_ID} className="flex items-center justify-center gap-2">
-                <span className="text-lg sm:text-xl lg:text-2xl">👉</span>
-                <span className="break-words leading-tight">Agende uma demonstração gratuita do Roboclean!</span>
+          <div className="pt-4 animate-fade-in-delayed">
+            <Button variant="cta" size="lg" asChild className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 h-auto animate-glow-pulse w-full sm:w-auto max-w-full">
+              <a href={FORM_SECTION_ID} className="flex items-center justify-center gap-2 text-center">
+                <span className="text-lg sm:text-xl hidden sm:inline">👉</span>
+                <span className="leading-tight">Agende sua demonstração gratuita!</span>
               </a>
             </Button>
           </div>
