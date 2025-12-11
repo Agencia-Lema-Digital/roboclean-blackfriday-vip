@@ -157,14 +157,14 @@ export const LeadForm = () => {
               variant="cta"
               size="lg"
               disabled={isSubmitting}
-              className="w-full text-base sm:text-lg py-6 h-auto animate-glow-pulse"
+              className="w-full text-sm sm:text-base md:text-lg py-4 sm:py-5 h-auto animate-glow-pulse"
             >
               {isSubmitting ? (
                 "Enviando..."
               ) : (
                 <>
-                  <span className="text-xl">👉</span>
-                  <span>Quero agendar minha demonstração gratuita</span>
+                  <span className="hidden sm:inline">👉</span>
+                  <span>Agendar demonstração gratuita</span>
                 </>
               )}
             </Button>
