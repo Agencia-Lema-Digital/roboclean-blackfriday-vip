@@ -19,6 +19,8 @@ export const LeadForm = () => {
     utm_campaign: "",
     utm_content: "",
     utm_term: "",
+    fbclid: "",
+    gclid: "",
   });
 
   // Captura UTMs da URL ao carregar
@@ -31,6 +33,8 @@ export const LeadForm = () => {
       utm_campaign: params.get("utm_campaign") || "",
       utm_content: params.get("utm_content") || "",
       utm_term: params.get("utm_term") || "",
+      fbclid: params.get("fbclid") || "",
+      gclid: params.get("gclid") || "",
     }));
   }, []);
 
@@ -43,11 +47,9 @@ export const LeadForm = () => {
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Solicitação enviada com sucesso!",
-      description: "Em breve entraremos em contato para agendar sua demonstração.",
-    });
+    
+    // Redireciona para página de obrigado
+    window.location.href = "https://www.robocleanbrasil.com.br/obrigado/";
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -151,6 +153,8 @@ export const LeadForm = () => {
             <input type="hidden" name="utm_campaign" value={formData.utm_campaign} />
             <input type="hidden" name="utm_content" value={formData.utm_content} />
             <input type="hidden" name="utm_term" value={formData.utm_term} />
+            <input type="hidden" name="fbclid" value={formData.fbclid} />
+            <input type="hidden" name="gclid" value={formData.gclid} />
 
             <Button
               type="submit"
