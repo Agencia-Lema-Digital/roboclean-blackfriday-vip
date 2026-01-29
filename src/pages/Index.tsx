@@ -6,9 +6,11 @@ import { Exclusivity } from "@/components/Exclusivity";
 import { SocialProof } from "@/components/SocialProof";
 import { LeadForm } from "@/components/LeadForm";
 import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <Header />
       <main>
         <Hero />
@@ -19,6 +21,9 @@ const Index = () => {
         <LeadForm />
       </main>
       <Footer />
-    </div>;
+      <WhatsAppButton />
+    </div>
+  );
 };
+
 export default Index;
