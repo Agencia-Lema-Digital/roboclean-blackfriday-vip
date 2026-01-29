@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Sparkles, Play, Pause, Volume2, VolumeX } from "lucide-react";
-import robocleanVideo from "@/assets/roboclean-video-29-1.mp4";
+import robocleanVideo from "@/assets/roboclean-video-curiosity.mp4";
 import { useEffect, useRef, useState } from "react";
 
 const FORM_SECTION_ID = "#formulario";
