@@ -42,9 +42,18 @@ export const LeadForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simula envio do formulário
-    // Aqui você pode integrar com seu backend/CRM
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      // Envia dados para o webhook
+      await fetch("https://hook.us2.make.com/bre9efr616en50lc0liyonic6jtk6rco", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+    } catch (error) {
+      console.error("Erro ao enviar webhook:", error);
+    }
 
     setIsSubmitting(false);
     
