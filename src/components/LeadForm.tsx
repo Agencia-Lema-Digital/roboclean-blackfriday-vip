@@ -43,22 +43,30 @@ export const LeadForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Envia dados para o webhook
-      await fetch("https://hook.us2.make.com/n749yk3ne367ugcyt1ncsiisza689uhp", {
+      // Envia dados para o webhook e aguarda a resposta
+      const response = await fetch("https://hook.us2.make.com/n749yk3ne367ugcyt1ncsiisza689uhp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
+
+      if (!response.ok) {
+        throw new Error(`Webhook failed with status: ${response.status}`);
+      }
+
+      // Aguarda 4 segundos para garantir que o webhook foi processado
+      await new Promise((resolve) => setTimeout(resolve, 4000));
+
+      // Redireciona para página de obrigado
+      window.location.href = "https://www.robocleanbrasil.com.br/obrigado/";
     } catch (error) {
       console.error("Erro ao enviar webhook:", error);
+      // Em caso de erro, ainda redireciona após um delay
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      window.location.href = "https://www.robocleanbrasil.com.br/obrigado/";
     }
-
-    setIsSubmitting(false);
-    
-    // Redireciona para página de obrigado
-    window.location.href = "https://www.robocleanbrasil.com.br/obrigado/";
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -173,7 +181,7 @@ export const LeadForm = () => {
               className="w-full text-sm sm:text-base md:text-lg py-4 sm:py-5 h-auto animate-glow-pulse"
             >
               {isSubmitting ? (
-                "Enviando..."
+                "Processando..."
               ) : (
                 <>
                   <span className="hidden sm:inline">👉</span>
