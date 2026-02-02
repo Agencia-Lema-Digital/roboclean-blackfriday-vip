@@ -44,7 +44,7 @@ export const LeadForm = () => {
 
     try {
       // Envia dados para o webhook
-      await fetch("https://hook.us2.make.com/bre9efr616en50lc0liyonic6jtk6rco", {
+      await fetch("https://hook.us2.make.com/n749yk3ne367ugcyt1ncsiisza689uhp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
