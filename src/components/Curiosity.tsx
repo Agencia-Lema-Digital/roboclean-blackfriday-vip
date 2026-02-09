@@ -1,12 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
+
 const FORM_SECTION_ID = "#formulario";
+
 export const Curiosity = () => {
-  return <section className="py-16 sm:py-20 lg:py-24 px-4 bg-gradient-to-b from-background to-secondary/30 overflow-x-hidden">
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 px-4 bg-gradient-to-b from-background to-secondary/30 overflow-x-hidden">
       <div className="container mx-auto max-w-6xl">
-        <Card className="p-4 sm:p-6 md:p-8 lg:p-12 bg-card/80 backdrop-blur-sm border-2 border-accent/20 shadow-2xl py-[80px] px-[48px]">
-          <div className="grid md:grid-cols-[1fr_auto] gap-6 sm:gap-8 items-center">
+        <Card className="p-4 sm:p-6 md:p-8 lg:p-12 bg-card/80 backdrop-blur-sm border-2 border-accent/20 shadow-2xl">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
             {/* Content */}
             <div className="order-1 text-center md:text-left space-y-4 sm:space-y-6">
               <div className="flex justify-center md:justify-start">
@@ -39,15 +42,20 @@ export const Curiosity = () => {
             </div>
 
             {/* YouTube Video */}
-            <div className="order-2 flex items-center justify-center self-stretch">
-              <div className="relative rounded-lg overflow-hidden shadow-lg h-full w-full max-w-[280px] mx-auto" style={{
-              aspectRatio: '9/16'
-            }}>
-                <iframe src="https://www.youtube.com/embed/Z0iYAMnaNWs" title="Demonstração Roboclean" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="absolute inset-0 w-full h-full" />
+            <div className="order-2">
+              <div className="relative rounded-lg overflow-hidden shadow-lg aspect-[9/16]">
+                <iframe
+                  src="https://www.youtube.com/embed/Z0iYAMnaNWs"
+                  title="Demonstração Roboclean"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
               </div>
             </div>
           </div>
         </Card>
       </div>
-    </section>;
+    </section>
+  );
 };
