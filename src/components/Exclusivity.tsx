@@ -2,9 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CalendarCheck, Home, Sparkles, Clock } from "lucide-react";
 import robocleanFull from "@/assets/roboclean-full.jpg";
-
 const FORM_SECTION_ID = "#formulario";
-
 const demoFeatures = [{
   icon: Home,
   text: "Demonstração gratuita no conforto da sua casa"
@@ -15,7 +13,6 @@ const demoFeatures = [{
   icon: Clock,
   text: "Sem compromisso — você decide depois de experimentar"
 }];
-
 export const Exclusivity = () => {
   return <section className="py-16 sm:py-20 lg:py-24 px-4 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
       {/* Background effects */}
@@ -40,7 +37,7 @@ export const Exclusivity = () => {
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
           {/* Product Image */}
           <div className="order-2 lg:order-1 overflow-hidden rounded-lg">
-            <img src={robocleanFull} alt="Roboclean Pro completo com todos os acessórios" className="w-full h-auto rounded-lg shadow-2xl hover:scale-105 transition-transform duration-500" />
+            <img alt="Roboclean Pro completo com todos os acessórios" className="w-full h-auto rounded-lg shadow-2xl hover:scale-105 transition-transform duration-500" src="/lovable-uploads/81125bf9-4d1d-4fac-aca8-a595e40a757c.png" />
           </div>
 
           {/* Card Content */}
