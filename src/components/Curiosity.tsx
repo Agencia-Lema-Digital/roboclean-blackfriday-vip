@@ -1,118 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Sparkles, Play, Pause, Volume2, VolumeX } from "lucide-react";
-import robocleanVideo from "@/assets/roboclean-video-curiosity.mp4";
-import { useEffect, useRef, useState } from "react";
+import { Sparkles } from "lucide-react";
 
 const FORM_SECTION_ID = "#formulario";
 
 export const Curiosity = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(async (entry) => {
-          if (entry.isIntersecting) {
-            try {
-              video.muted = true;
-              await video.play();
-              setIsPlaying(true);
-            } catch (err) {
-              console.log("Autoplay prevented:", err);
-            }
-          } else {
-            video.pause();
-            setIsPlaying(false);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    observer.observe(video);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  const handleTogglePlay = async () => {
-    const v = videoRef.current;
-    if (!v) return;
-    if (v.paused) {
-      try {
-        await v.play();
-        setIsPlaying(true);
-        if (isMuted) {
-          v.muted = false;
-          setIsMuted(false);
-        }
-      } catch (e) {
-        console.log("Manual play failed:", e);
-      }
-    } else {
-      v.pause();
-      setIsPlaying(false);
-    }
-  };
-
-  const handleToggleMute = () => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.muted = !v.muted;
-    setIsMuted(v.muted);
-  };
-
   return (
     <section className="py-16 sm:py-20 lg:py-24 px-4 bg-gradient-to-b from-background to-secondary/30 overflow-x-hidden">
       <div className="container mx-auto max-w-6xl">
         <Card className="p-4 sm:p-6 md:p-8 lg:p-12 bg-card/80 backdrop-blur-sm border-2 border-accent/20 shadow-2xl">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
-            {/* Product Video */}
+            {/* YouTube Video */}
             <div className="order-2 md:order-1">
-              <div className="relative rounded-lg overflow-hidden shadow-lg">
-                <video 
-                  ref={videoRef}
-                  src={robocleanVideo}
-                  className="w-full rounded-lg cursor-pointer"
-                  loop
-                  playsInline
-                  muted={isMuted}
-                  preload="metadata"
-                  aria-label="Demonstração em vídeo do Roboclean"
-                  onClick={handleTogglePlay}
-                  onPlay={() => setIsPlaying(true)}
-                  onPause={() => setIsPlaying(false)}
-                >
-                  Seu navegador não suporta vídeos.
-                </video>
-
-                {/* Controles personalizados */}
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-3 rounded-md bg-background/70 backdrop-blur px-3 py-2 border border-border/50 shadow-sm">
-                  <button
-                    type="button"
-                    onClick={handleTogglePlay}
-                    aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
-                    className="inline-flex items-center justify-center h-9 w-9 rounded-md bg-accent text-accent-foreground hover:bg-accent/90 transition-colors"
-                  >
-                    {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={handleToggleMute}
-                    aria-label={isMuted ? "Ativar som" : "Desativar som"}
-                    className="inline-flex items-center justify-center h-9 w-9 rounded-md border border-border bg-card text-card-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
-                    {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-                  </button>
-                </div>
+              <div className="relative rounded-lg overflow-hidden shadow-lg aspect-[9/16]">
+                <iframe
+                  src="https://www.youtube.com/embed/Z0iYAMnaNWs"
+                  title="Demonstração Roboclean"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
               </div>
             </div>
 
