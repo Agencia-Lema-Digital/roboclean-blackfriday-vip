@@ -5,7 +5,7 @@ const FORM_SECTION_ID = "#formulario";
 export const Curiosity = () => {
   return <section className="py-16 sm:py-20 lg:py-24 px-4 bg-gradient-to-b from-background to-secondary/30 overflow-x-hidden">
       <div className="container mx-auto max-w-6xl">
-        <Card className="p-4 sm:p-6 md:p-8 lg:p-12 bg-card/80 backdrop-blur-sm border-2 border-accent/20 shadow-2xl px-[4px] py-[80px]">
+        <Card className="p-4 sm:p-6 md:p-8 lg:p-12 bg-card/80 backdrop-blur-sm border-2 border-accent/20 shadow-2xl py-[80px] px-[48px]">
           <div className="grid md:grid-cols-[1fr_auto] gap-6 sm:gap-8 items-center">
             {/* Content */}
             <div className="order-1 text-center md:text-left space-y-4 sm:space-y-6">
