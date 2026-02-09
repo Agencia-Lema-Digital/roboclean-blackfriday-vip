@@ -17,12 +17,8 @@ export const Hero = () => {
       <div className="container mx-auto relative z-10 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center my-[30px] py-0">
           {/* Product Image */}
-          <div className="order-2 lg:order-1 animate-fade-in">
-            <img src={robocleanHero} alt="Roboclean Pro - Aspirador com Filtragem de Água e HEPA" className="w-full max-w-md lg:max-w-lg mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
-          </div>
-
           {/* Content */}
-          <div className="order-1 lg:order-2 text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in">
+          <div className="order-1 lg:order-1 text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in">
           {/* Main headline */}
           <h1 className="font-altone text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
             Mais do que um aspirador: o Roboclean transforma o ar, o ambiente e o{" "}
@@ -48,6 +44,11 @@ export const Hero = () => {
             <p className="text-xs sm:text-sm text-muted-foreground pt-6">
               Mais de 30.000 famílias já confiam no Roboclean
             </p>
+          </div>
+
+          {/* Product Image */}
+          <div className="order-2 lg:order-2 animate-fade-in">
+            <img src={robocleanHero} alt="Roboclean Pro - Aspirador com Filtragem de Água e HEPA" className="w-full max-w-md lg:max-w-lg mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
           </div>
         </div>
       </div>
