@@ -10,21 +10,8 @@ export const Curiosity = () => {
       <div className="container mx-auto max-w-6xl">
         <Card className="p-4 sm:p-6 md:p-8 lg:p-12 bg-card/80 backdrop-blur-sm border-2 border-accent/20 shadow-2xl">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
-            {/* YouTube Video */}
-            <div className="order-2 md:order-1">
-              <div className="relative rounded-lg overflow-hidden shadow-lg aspect-[9/16]">
-                <iframe
-                  src="https://www.youtube.com/embed/Z0iYAMnaNWs"
-                  title="Demonstração Roboclean"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
-            </div>
-
             {/* Content */}
-            <div className="order-1 md:order-2 text-center md:text-left space-y-4 sm:space-y-6">
+            <div className="order-1 text-center md:text-left space-y-4 sm:space-y-6">
               <div className="flex justify-center md:justify-start">
                 <Sparkles className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 text-accent animate-pulse" />
               </div>
@@ -51,6 +38,19 @@ export const Curiosity = () => {
                     <span>Demonstração gratuita</span>
                   </a>
                 </Button>
+              </div>
+            </div>
+
+            {/* YouTube Video */}
+            <div className="order-2">
+              <div className="relative rounded-lg overflow-hidden shadow-lg aspect-[9/16]">
+                <iframe
+                  src="https://www.youtube.com/embed/Z0iYAMnaNWs"
+                  title="Demonstração Roboclean"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
               </div>
             </div>
           </div>
