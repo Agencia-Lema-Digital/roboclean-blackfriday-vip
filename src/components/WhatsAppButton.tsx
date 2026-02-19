@@ -99,6 +99,7 @@ export const WhatsAppButton = () => {
     <>
       {/* ── Botão flutuante ── */}
       <button
+        id="whatsapp-float-btn"
         onClick={() => setOpen(true)}
         aria-label="Fale conosco pelo WhatsApp"
         className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 animate-pulse"
@@ -162,6 +163,7 @@ export const WhatsAppButton = () => {
             </div>
 
             <Button
+              id="whatsapp-lead-submit-btn"
               type="submit"
               disabled={isSubmitting}
               className="w-full h-12 text-base font-semibold gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white shadow-md hover:shadow-lg transition-all"
