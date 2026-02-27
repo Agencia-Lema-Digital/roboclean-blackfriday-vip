@@ -19,7 +19,7 @@ export const Hero = () => {
           {/* Content */}
           <div className="order-1 text-center lg:text-left space-y-3 sm:space-y-6 lg:space-y-8 animate-fade-in">
             {/* Main headline */}
-            <h1 className="font-altone text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+            <h1 className="font-altone sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-3xl">
               Mais do que um aspirador: o Roboclean transforma o ar, o ambiente e o{" "}
               <span className="text-accent">bem-estar da sua família.</span>
             </h1>
